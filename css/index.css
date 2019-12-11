@@ -139,6 +139,20 @@ body {
 header {
   height: 7vh;
 }
+@media (max-width: 500px) {
+  header {
+    margin-bottom: 25%;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav a {
+    line-height: 200%;
+    border-bottom: 2px solid lightgray;
+  }
+}
 header nav {
   display: flex;
   justify-content: space-evenly;
@@ -187,8 +201,21 @@ header nav a {
   padding: 3%;
   border-bottom: 2px lightgray solid;
 }
+@media (max-width: 500px) {
+  .secondmain {
+    display: flex;
+    flex-direction: column;
+    margin: 7% 0%;
+  }
+  .secondmain .blockOne {
+    margin-bottom: 10%;
+  }
+  .secondmain .blockTwo {
+    margin-bottom: 10%;
+  }
+}
 .secondmain .blockOne {
-  width: 50%;
+  width: 86%;
 }
 .secondmain .blockOne h2 {
   font-size: 3rem;
