@@ -20,9 +20,10 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
+	max-width: 100%;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -54,6 +55,161 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	margin: 0 8%;
+	
 }
 
+// VARIABLES
+
+@montser: 'Montserrat', sans-serif;
+
+
+
+// MIXINS
+.flex(){
+	display:flex;
+}
+.flow(){
+	flex-direction: column;
+	align-items: center;
+}
+
+.imagespec(){
+	width:600px;
+	border: 3px solid grey;
+    border-radius: 4px;
+    padding: 5px;
+   
+	
+}
+
+.spacing(){
+	padding:2% 0%;
+}
+
+.buttonstyle(){
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+// START OF LESS
+
+header{
+	
+	height:7vh;
+
+	nav{
+		.flex();
+		justify-content: space-evenly;
+		margin-top:3%;
+		
+
+		a{
+		
+		font-family: @montser;	
+		
+		}//closes anchor tag
+	}//closes nav
+}//closes header
+
+.main{
+	.flex();
+	flex-direction: column;
+	background-color: lightgrey;
+	padding:4%;
+	
+	h2{
+		font-size: 3rem;
+		font-family: @montser;
+		.spacing();
+		
+	}
+
+	p{
+		.spacing();
+		font-family: @montser;
+	}
+
+	button{
+		.buttonstyle();
+	}
+	
+	.mainimg{
+		.imagespec();
+		
+		
+	
+	}//closes img tag
+	
+}//closes main
+
+.secondmain{
+	.flex();
+	padding:3%;
+	border-bottom: 2px lightgray solid;
+
+	.blockOne{
+		width:50%;
+
+		h2{
+			font-size: 3rem;
+		font-family: @montser;
+		.spacing();
+		}//closes h2
+
+		p{
+			font-family: @montser;
+			width:80%
+		}
+	}//closes blockOne
+
+	.blockTwo{
+		width:50%;
+
+		h2{
+			font-size: 3rem;
+		font-family: @montser;
+		.spacing();
+		}//closes h2
+
+		ul{
+		
+			
+			li{
+			font-family: @montser;
+			width:80%;
+			.spacing();
+			
+			}
+		}
+	}//closes blockTwo
+}
+
+footer{
+	.flex();
+	.flow();
+	border-bottom:2px solid grey;
+	p{
+		margin-top: 3%;
+		.spacing();
+		font-family: @montser;
+	}//closes p 
+
+	.copyright{
+		margin-top: 4%;
+		
+		h2{
+		
+		font-family: @montser;
+		}//closes h2
+	}	
+}
