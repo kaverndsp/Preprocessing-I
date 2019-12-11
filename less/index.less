@@ -64,6 +64,7 @@ html, body {
 
 @montser: 'Montserrat', sans-serif;
 
+@color: black;
 
 
 // MIXINS
@@ -114,7 +115,8 @@ header{
 		
 
 		a{
-		
+		color: @color;
+		text-decoration: none;
 		font-family: @montser;	
 		
 		}//closes anchor tag
@@ -192,24 +194,58 @@ header{
 			}
 		}
 	}//closes blockTwo
-}
+}//closes secondmain
+
+.introduction{
+	.flex();
+	flex-direction: column;
+	align-items: center;
+	padding:3%;
+	
+	.introOne{
+		.spacing();
+
+			h2{
+				font-family: @montser;
+				font-size: 3rem;
+			}//closes h2
+	}//closes introOne
+
+	.introTwo{
+		p{
+			font-family: @montser;
+			line-height: 160%;
+		}//closes p
+	}//closes introTwo
+
+
+}//closes introduction
+
+
+
+
+
+
 
 footer{
 	.flex();
 	.flow();
-	border-bottom:2px solid grey;
+	border-bottom:2px solid lightgray;
+	border-top:2px solid lightgray;
+	margin-top:3%;
 	p{
-		margin-top: 3%;
+		margin-top: 4%;
 		.spacing();
 		font-family: @montser;
 	}//closes p 
 
 	.copyright{
 		margin-top: 4%;
+		margin-bottom: 0.25%;
 		
 		h2{
 		
 		font-family: @montser;
 		}//closes h2
 	}	
-}
+}//closes footer
